@@ -1,4 +1,4 @@
-package pl.exercise.ferry.ticket;
+package pl.exercise.ferry.vehicleticket;
 
 import java.math.BigDecimal;
 
