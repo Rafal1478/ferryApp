@@ -5,8 +5,14 @@ import pl.exercise.ferry.vehicleticket.*;
 import java.util.Scanner;
 
 
-public class VehicleScreen implements Screen {
+public class VehicleScreen extends AbstractScreen {
     private static Scanner in = new Scanner(System.in);
+
+    public VehicleScreen(ScreenManager screenManager) {
+        super(screenManager);
+
+
+    }
 
     @Override
     public void interact() {
@@ -22,6 +28,11 @@ public class VehicleScreen implements Screen {
         System.out.println("Cena za bilet wynosi: " + ticket.getPrice().toString());
 
 
+    }
+
+    @Override
+    public boolean isSupportingId(ScreenIdentity screenId) {
+        return ScreenIdentity.VEHICLESCREEN == screenId;
     }
 
     public static Ticket getTicket(int type){
