@@ -11,4 +11,9 @@ public class CarTicket extends VehicleTicket {
     public BigDecimal getPrice() {
         return BigDecimal.valueOf(20);
     }
+
+    @Override
+    public String getName() {
+        return null;
+    }
 }

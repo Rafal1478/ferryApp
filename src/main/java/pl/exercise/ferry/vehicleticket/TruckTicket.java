@@ -16,4 +16,9 @@ public class TruckTicket extends VehicleTicket {
         int weitght = in.nextInt();
         return BigDecimal.valueOf(weitght * 10);
     }
+
+    @Override
+    public String getName() {
+        return null;
+    }
 }

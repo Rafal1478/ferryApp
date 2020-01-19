@@ -18,13 +18,26 @@ public class Basket {
     public Basket() {
     }
 
-    public BigDecimal addAmount(BigDecimal price){
-        return amount.add(price);
+    public void addAmount(BigDecimal price){
+         amount = amount.add(price);
 
     }
     public void addToList(Ticket ticket){
         ticketList.add(ticket);
     }
+    public void displayList() {
+        if (ticketList.isEmpty()) {
+            System.out.println("Twój koszyk jest pusty!!!");
+        } else {
+            for (Ticket ticket : ticketList) {
 
-
+                System.out.println("Bilet został kupiony dla: " + ticket.getName() + " , na kwote: " + ticket.getPrice().toString());
+                System.out.println("***************************************************************");
+            }
+        }
+    }
+    public void displayAmount(){
+        System.out.println("Całkowita cena zakupów to: " + Basket.INSTANCE.amount.toString() + " zł");
+        System.out.println("************************************************************************");
+    }
 }

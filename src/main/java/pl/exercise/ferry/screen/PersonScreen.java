@@ -24,8 +24,7 @@ public class PersonScreen extends AbstractScreen {
     public void interact() {
         System.out.println("Kupiłeś bilet dla człowieka");
         System.out.println("Podaj imie");
-        in.next();
-        String name = in.nextLine();
+        String name = in.next();
         System.out.println("Podaj wiek osoby");
         int age = in.nextInt();
         System.out.println("Kupiłeś bilet dla: " + PaxType.fromAge(age));
@@ -44,18 +43,22 @@ public class PersonScreen extends AbstractScreen {
                 ChildTicket child =  new ChildTicket(name);
                 Basket.INSTANCE.addAmount(child.getPrice());
                 Basket.INSTANCE.addToList(child);
+                return child;
             case YOUNG:
                 YoungTicket young = new YoungTicket(name);
                 Basket.INSTANCE.addAmount(young.getPrice());
                 Basket.INSTANCE.addToList(young);
+                return young;
             case ADULT:
                 AdultTicket adult = new AdultTicket(name);
                 Basket.INSTANCE.addAmount(adult.getPrice());
                 Basket.INSTANCE.addToList(adult);
+                return adult;
             case SENIOR:
                 SeniorTicket senior = new SeniorTicket(name);
                 Basket.INSTANCE.addAmount(senior.getPrice());
                 Basket.INSTANCE.addToList(senior);
+                return senior;
             case UNKNOWN:
                 System.out.println("Fatal error");
                 break;

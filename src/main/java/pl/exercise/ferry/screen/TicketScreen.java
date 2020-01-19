@@ -21,7 +21,7 @@ public class TicketScreen extends AbstractScreen {
         if ("2".equalsIgnoreCase(firstResponse)){
             screenManager.chooseScreen(ScreenIdentity.VEHICLESCREEN);
         }
-            screenManager.chooseScreen(ScreenIdentity.TICKETSCREEN);
+            screenManager.chooseScreen(ScreenIdentity.MAINSCREEN);
 
 
     }

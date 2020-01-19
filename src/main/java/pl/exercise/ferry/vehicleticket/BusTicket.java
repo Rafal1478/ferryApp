@@ -17,4 +17,9 @@ public class BusTicket extends VehicleTicket {
 
         return BigDecimal.valueOf(5*lentgh);
     }
+
+    @Override
+    public String getName() {
+        return null;
+    }
 }
