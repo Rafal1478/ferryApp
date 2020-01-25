@@ -6,5 +6,5 @@ public interface Ticket {
 
   BigDecimal getPrice();
 
-  public String getName();
+   String getName();
 }

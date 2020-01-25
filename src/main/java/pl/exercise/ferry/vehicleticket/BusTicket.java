@@ -6,20 +6,21 @@ import java.util.Scanner;
 public class BusTicket extends VehicleTicket {
     private static Scanner in = new Scanner(System.in);
 
-    public BusTicket() {
-        super(VehicleType.BUS, "unknow");
+    int length;
+
+    public BusTicket(String owner, int length) {
+        super(VehicleType.BUS, owner);
+        this.length = length;
+
     }
 
     @Override
     public BigDecimal getPrice() {
-        System.out.println("Podaj długość pojazdu");
-        int lentgh = in.nextInt();
-
-        return BigDecimal.valueOf(5*lentgh);
+        return BigDecimal.valueOf(5*length);
     }
 
     @Override
     public String getName() {
-        return null;
+        return "Autobus";
     }
 }

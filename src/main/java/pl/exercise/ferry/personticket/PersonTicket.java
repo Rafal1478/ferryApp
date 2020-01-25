@@ -7,10 +7,15 @@ public abstract class  PersonTicket implements Ticket {
 
     public final PaxType paxType;
     protected String name;
+    protected int age;
 
-    protected PersonTicket(PaxType paxType, String name) {
+    protected PersonTicket(PaxType paxType, String name,int age) {
         this.paxType = paxType;
         this.name = name;
+        this.age = age;
+    }
+    public int getAge(){
+        return age;
     }
 
 }

@@ -3,8 +3,8 @@ package pl.exercise.ferry.vehicleticket;
 import java.math.BigDecimal;
 
 public class CarTicket extends VehicleTicket {
-    public CarTicket() {
-        super(VehicleType.CAR, "unknown");
+    public CarTicket(String owner) {
+        super(VehicleType.CAR, owner);
     }
 
     @Override
@@ -14,6 +14,6 @@ public class CarTicket extends VehicleTicket {
 
     @Override
     public String getName() {
-        return null;
+        return "Samochód";
     }
 }

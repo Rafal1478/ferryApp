@@ -9,4 +9,12 @@ public abstract class VehicleTicket implements Ticket {
     this.vehicleType = vehicleType;
     this.owner = owner;
   }
+
+  public VehicleType getVehicleType() {
+    return vehicleType;
+  }
+
+  public String getOwner() {
+    return owner;
+  }
 }

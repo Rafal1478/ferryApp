@@ -1,5 +1,6 @@
 package pl.exercise.ferry.screen;
 
+import java.io.IOException;
 import java.util.Set;
 
 public class ScreenManager {
@@ -21,7 +22,11 @@ public class ScreenManager {
 
     void chooseScreen(ScreenIdentity screenId) {
         Screen chosenScreen = findScreen(screenId);
-        chosenScreen.interact();
+        try {
+            chosenScreen.interact();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     private Screen findScreen(ScreenIdentity screenId) {

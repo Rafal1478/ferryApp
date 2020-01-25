@@ -5,8 +5,8 @@ import pl.exercise.ferry.pax.PaxType;
 import java.math.BigDecimal;
 
 public class ChildTicket extends PersonTicket {
-    public ChildTicket(String name) {
-        super(PaxType.CHILD, name);
+    public ChildTicket(String name, int age) {
+        super(PaxType.CHILD, name, age);
     }
 
     @Override
@@ -17,6 +17,9 @@ public class ChildTicket extends PersonTicket {
     @Override
     public String getName() {
         return name;
+    }
+    public int getAge(){
+        return age;
     }
 
 }

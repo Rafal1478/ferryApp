@@ -5,8 +5,8 @@ import pl.exercise.ferry.pax.PaxType;
 import java.math.BigDecimal;
 
 public class SeniorTicket extends PersonTicket {
-    public SeniorTicket(String name) {
-        super(PaxType.SENIOR, name);
+    public SeniorTicket(String name, int age) {
+        super(PaxType.SENIOR, name, age);
     }
 
     @Override
@@ -17,6 +17,9 @@ public class SeniorTicket extends PersonTicket {
     @Override
     public String getName() {
         return name;
+    }
+    public int getAge(){
+        return age;
     }
 
 }

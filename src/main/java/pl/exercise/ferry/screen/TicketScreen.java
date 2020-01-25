@@ -13,7 +13,7 @@ public class TicketScreen extends AbstractScreen {
     public void interact() {
         System.out.println("Proosze wybrać rodzaj biletu, ");
         System.out.println("1. Osoba");
-        System.out.println("2. Pojazd");
+        System.out.println("2. Pojazd + kierowca");
         String firstResponse = in.nextLine();
         if ("1".equalsIgnoreCase(firstResponse)){
             screenManager.chooseScreen(ScreenIdentity.PERSONSCREEN);
@@ -21,10 +21,10 @@ public class TicketScreen extends AbstractScreen {
         if ("2".equalsIgnoreCase(firstResponse)){
             screenManager.chooseScreen(ScreenIdentity.VEHICLESCREEN);
         }
+
             screenManager.chooseScreen(ScreenIdentity.MAINSCREEN);
+        }
 
-
-    }
 
     @Override
     public boolean isSupportingId(ScreenIdentity screenId) {
