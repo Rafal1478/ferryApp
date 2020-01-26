@@ -13,7 +13,8 @@ public class ScreenManager {
         final VehicleScreen vehicleScreen = new VehicleScreen(this);
         final TicketScreen ticketScreen = new TicketScreen(this);
         final DisplayScreen displayScreen = new DisplayScreen(this);
-        this.screens = Set.of(personScreen, mainScreen, vehicleScreen, ticketScreen, displayScreen);
+        final MercaScreen mercaScreen = new MercaScreen(this);
+        this.screens = Set.of(personScreen, mainScreen, vehicleScreen, ticketScreen, displayScreen, mercaScreen);
     }
 
     public void start() {

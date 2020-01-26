@@ -1,14 +1,22 @@
 package pl.exercise.ferry.screen;
 
 import pl.exercise.ferry.basket.Basket;
+import pl.exercise.ferry.basket.Reader;
+
+import java.io.FileNotFoundException;
 
 public class DisplayScreen extends AbstractScreen {
+
+
     DisplayScreen(ScreenManager screenManager) {
         super(screenManager);
     }
 
     @Override
-    public void interact() {
+    public void interact() throws FileNotFoundException {
+
+
+
         System.out.println("1. Wyswietl zakupione bilety");
         System.out.println("2. Wyświetl saldo zakupów");
         System.out.println("3. Wróć do początku");
@@ -16,6 +24,7 @@ public class DisplayScreen extends AbstractScreen {
         if("1".equalsIgnoreCase(firstResponse)){
             Basket.INSTANCE.displayList();
             screenManager.chooseScreen(ScreenIdentity.DISPLAYSCREEN);
+            Basket.INSTANCE.ticketList.clear();
         }
         if ("2".equalsIgnoreCase(firstResponse)){
             Basket.INSTANCE.displayAmount();
@@ -24,6 +33,7 @@ public class DisplayScreen extends AbstractScreen {
         }
         if ("3".equalsIgnoreCase(firstResponse)){
             screenManager.chooseScreen(ScreenIdentity.MAINSCREEN);
+
         }
 
     }

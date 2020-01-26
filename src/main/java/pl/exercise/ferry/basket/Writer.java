@@ -8,18 +8,19 @@ import java.util.Date;
 
 public class Writer {
 
+    public String getId() {
+        return id;
+    }
 
-
-    final String path = "C:\\Users\\rnwk\\Desktop\\Writer\\bilety";
+    String id;
+    final String path = "C:\\Users\\rnwk\\Desktop\\Writer\\";
 
     public Writer() throws IOException {
-
     }
     public File createFile(){
-        String newPath = path + new Date().getTime() + ".txt";
+        id = String.valueOf(new Date().getTime());
+        String newPath = path + id + ".txt";
         return  new File(newPath);
-
-
     }
 
 

@@ -8,6 +8,10 @@ public class TruckTicket extends VehicleTicket {
 
     int weitght;
 
+    public int getWeitght() {
+        return weitght;
+    }
+
     public TruckTicket(String owner, int weitght) {
         super(VehicleType.TRUCK, owner);
         this.weitght = weitght;

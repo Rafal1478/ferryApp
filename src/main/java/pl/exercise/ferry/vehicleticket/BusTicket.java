@@ -6,6 +6,10 @@ import java.util.Scanner;
 public class BusTicket extends VehicleTicket {
     private static Scanner in = new Scanner(System.in);
 
+    public int getLength() {
+        return length;
+    }
+
     int length;
 
     public BusTicket(String owner, int length) {
